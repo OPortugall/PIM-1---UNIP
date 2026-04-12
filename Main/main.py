@@ -62,6 +62,8 @@ else:
     exit()
 
 sleep(2)
+title('DJE - Engenharia')
+sleep(2)
 
 def menu(options):
     title('MENU PRINCIPAL')
@@ -77,7 +79,7 @@ def menu(options):
             else:
                 print(color('Opção inválida', 'red'))
         except:
-            print(color('Opção inválida!', 'red'))
+            print(color('Digite uma opção válida!', 'red'))
 
 options = ['Gastos',
            'Margem de lucro',
