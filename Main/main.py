@@ -50,11 +50,38 @@ password = input(color('Senha: ', 'green'))
 
 #Validação
 if user_validation(user, email, password):
+    sleep(1)
     print(color(line, 'yellow'))
     print(color('Seja bem-vindo!'.center(len(line)), 'blue'))
     print(color(line, 'yellow'))
 else:
+    sleep(1)
     print(color(line, 'yellow'))
     print(color('Usuário não encontrado!'.center(len(line)), 'red'))
     print(color(line, 'yellow'))
+    exit()
 
+sleep(2)
+
+def menu(options):
+    title('MENU PRINCIPAL')
+    for i, option in enumerate(options, 1):
+        print(color(f'{i} - {option}', 'blue'))
+    print(color(line, 'yellow'))
+
+    while True:
+        try:
+            choose = int( input(color('Escolha uma opção: ', 'green')))
+            if 1 <= choose <= len(options):
+                return choose
+            else:
+                print(color('Opção inválida', 'red'))
+        except:
+            print(color('Opção inválida!', 'red'))
+
+options = ['Gastos',
+           'Margem de lucro',
+           'Equipamentos Eletrônicos',
+           'Desperdício']
+
+menu(options)
