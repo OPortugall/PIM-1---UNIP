@@ -30,7 +30,7 @@ admin = {
 }
 
 #Função para validar
-def user_validation(user, email, password):
+def is_user_valid(user, email, password):
     return (user == admin['username'] and
             email == admin['email'] and 
             password == admin['password'])
@@ -48,7 +48,7 @@ email = str( input(color('Email: ', 'green')))
 password = input(color('Senha: ', 'green'))
 
 #Validação
-if user_validation(user, email, password):
+if is_user_valid(user, email, password):
     sleep(1)
     print(color(line, 'yellow'))
     print(color('Seja bem-vindo!'.center(len(line)), 'cian'))
