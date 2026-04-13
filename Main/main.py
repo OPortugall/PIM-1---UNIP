@@ -31,11 +31,11 @@ admin = {
 
 #Função para validar
 def user_validation(user, email, password):
-    if (user == admin['username'] and
-        email == admin['email'] and 
-        password == admin['password']):
-        return True
-    return False
+     return (user == admin['username'] and
+            email == admin['email'] and 
+            password == admin['password'])
+     
+        
 
 #Login
 def login(lgn):
@@ -66,6 +66,7 @@ sleep(2)
 title('DJE - Engenharia')
 sleep(2)
 
+#menu de opções
 def menu(options):
     title('MENU PRINCIPAL')
     for i, option in enumerate(options, 1):
