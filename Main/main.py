@@ -31,12 +31,10 @@ admin = {
 
 #Função para validar
 def user_validation(user, email, password):
-     return (user == admin['username'] and
+    return (user == admin['username'] and
             email == admin['email'] and 
             password == admin['password'])
      
-        
-
 #Login
 def login(lgn):
     print(color(line, 'yellow'))
