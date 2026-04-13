@@ -8,7 +8,8 @@ def color(text, color_name):
         'yellow': '\033[1;33m',
         'red': '\033[1;31m',
         'green': '\033[1;32m',
-        'blue': '\033[1;34m'
+        'blue': '\033[1;34m',
+        'cian': '\033[1;36m'
     }
     return colors.get(color_name, colors['clear']) + text + colors['clear']
 
@@ -18,7 +19,7 @@ line = ('-' * 40)
 #Título em si
 def title(txt):
     print(color(line, 'yellow'))
-    print(color(txt.center(len(line)), 'blue'))
+    print(color(txt.center(len(line)), 'cian'))
     print(color(line, 'yellow'))
 
 #Defini o 'login' do admin, mais pra frente vai ter verificação disso
@@ -39,10 +40,10 @@ def user_validation(user, email, password):
 #Login
 def login(lgn):
     print(color(line, 'yellow'))
-    print(color(lgn.center(len(line)), 'blue'))
+    print(color(lgn.center(len(line)), 'cian'))
     print(color(line, 'yellow'))
 
-login('Faça seu login para continuar!')
+login('Faça seu login para continuar')
 
 user = str( input(color('Usuário: ', 'green')))
 email = str( input(color('Email: ', 'green')))
@@ -52,7 +53,7 @@ password = input(color('Senha: ', 'green'))
 if user_validation(user, email, password):
     sleep(1)
     print(color(line, 'yellow'))
-    print(color('Seja bem-vindo!'.center(len(line)), 'blue'))
+    print(color('Seja bem-vindo!'.center(len(line)), 'cian'))
     print(color(line, 'yellow'))
 else:
     sleep(1)
@@ -83,7 +84,11 @@ def menu(options):
 
 options = ['Gastos',
            'Margem de lucro',
-           'Equipamentos Eletrônicos',
-           'Desperdício']
+           'Materiais',
+           'Desperdício',
+           'Equipamentos eletrônicos',
+           'Funcinários',
+           'Sair',
+           ]
 
 menu(options)
