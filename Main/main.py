@@ -90,7 +90,7 @@ options = ['Gastos',
            'Sair',
            ]
 
-Gastos = [
+Gastos = ['Teste'
 ]
 
 MargemLucro = [
@@ -116,20 +116,21 @@ Funcionarios = [
 while True:
     response = menu(options)
     sleep(1)
-    if response == 1:
-        print(Gastos)
-    elif response == 2:
-        print(MargemLucro)
-    elif response == 3:
-        print(Materiais)
-    elif response == 4:
-        print(Desperdicio)
-    elif response == 5:
-        print(EquipamentosEletronicos)
-    elif response == 6:
-        print(Funcionarios)
-    elif response == 7:
-        break
+    match response:
+        case 1:
+            print(Gastos)
+        case 2:
+            print(MargemLucro)
+        case 3:
+            print(Materiais)
+        case 4:
+            print(Desperdicio)
+        case 5:
+            print(EquipamentosEletronicos)
+        case 6:
+            print(Funcionarios)
+        case 7:
+            break
     sleep(1)
 title('Finalizando sistema de consultas...')
 sleep(2)
