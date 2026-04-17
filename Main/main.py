@@ -90,28 +90,30 @@ options = ['Gastos',
            'Sair',
            ]
 
-Gastos = ['Teste'
-]
+Gastos = {
+    'Teste'
+}
 
-MargemLucro = [
+MargemLucro = {
+    'Teste'
+}
 
-]
+Materiais = {
+    'Teste'
+}
 
-Materiais = [
+Desperdicio = {
+    'Teste'
+}
 
-]
+EquipamentosEletronicos = {
+    'Teste'
+}   
 
-Desperdicio = [
+Funcionarios = {
+    'Teste'
+}
 
-]
-
-EquipamentosEletronicos = [
-
-]
-
-Funcionarios = [
-
-]
 
 while True:
     response = menu(options)
