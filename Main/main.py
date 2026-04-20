@@ -160,7 +160,8 @@ MargemLucro = {
 'Venda Material x 1.50: R$ 50.943,19',
 'Venda total x 1.59(Taxa Mão de Obra/Taxa Material): R$ 76.270,99',
 color('Imposto pago: Total x 0,12: R$ 9.152,52', 'red'),
-color('Lucro Previsto: R$ 19.085,34', 'green')
+color('Lucro Previsto: R$ 19.085,34', 'blue'),
+color(f'Lucro real: Lucro Previsto x 0.05 = R$ {19085.34 * 0.05}', 'green')
 ],
 
 'Contrato: 25149 - Jardinatti' : [
@@ -171,7 +172,8 @@ color('Lucro Previsto: R$ 19.085,34', 'green')
 'Venda Material x 1.50: R$ 8.130,24',
 'Venda total x 1.59(Taxa Mão de Obra/Taxa Material): R$ 12.306,24',
 color('Imposto pago: Total x 0,12: R$ 1.476,75', 'red'),
-color('Lucro Previsto: R$ 3.992,69', 'green')
+color('Lucro Previsto: R$ 3.992,69', 'blue'),
+color(f'Lucro real: Lucro Previsto x 0.05 = R$ {3992.69 * 0.05}', 'green')
 ],
 
 'Contrato: 25147 - Garden' :[
@@ -182,7 +184,8 @@ color('Lucro Previsto: R$ 3.992,69', 'green')
 'Venda Material x 1.50: R$ 446,58',
 'Venda total x 1.59(Taxa Mão de Obra/Taxa Material): R$ 1.236,57',
 color('Imposto pago: Total x 0,12: R$ 148,39', 'red'),
-color('Lucro Previsto: R$ 307,38', 'green')
+color('Lucro Previsto: R$ 307,38', 'blue'),
+color(f'Lucro real: Lucro Previsto x 0.05 = R$ {307.38 * 0.05}', 'green')
 ]
 
 }
@@ -213,35 +216,31 @@ Funcionarios = {
     'Teste'
 }
 
+#Retorna o a chave e o valor de cada uma das opções escolhidas
+def items(case):
+    for key, values in case.items():
+        sleep(2)
+        title(f'{key}')
+        for item in values:
+            print(f'- {item}')
+
 #Menu de interação 
 while True:
     response = menu(options)
     sleep(1)
     match response:
         case 1:
-            for key, values in Gastos.items():
-                sleep(2)
-                title(f'{key}')
-                for item in values:
-                    print(f'- {item}')
+            items(Gastos)
         case 2:
-            for key, values in MargemLucro.items():
-                sleep(2)
-                title(f'{key}')
-                for item in values:
-                    print(f'- {item}')
+            items(MargemLucro)
         case 3:
-            for key, values in Materiais.items():
-                sleep(2)
-                title(f'{key}')
-                for item in values:
-                    print(f'- {item}')
+            items(Materiais)
         case 4:
-            print(Desperdicio)
+            items(Desperdicio)
         case 5:
-            print(EquipamentosEletronicos)
+            items(EquipamentosEletronicos)
         case 6:
-            print(Funcionarios)
+            items(Funcionarios)
         case 7:
             break
     sleep(1)
