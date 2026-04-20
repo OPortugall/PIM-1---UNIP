@@ -185,7 +185,7 @@ color(f'Lucro real: Lucro Previsto x 0.05 = R$ {3992.69 * 0.05}', 'green')
 'Venda total x 1.59(Taxa Mão de Obra/Taxa Material): R$ 1.236,57',
 color('Imposto pago: Total x 0,12: R$ 148,39', 'red'),
 color('Lucro Previsto: R$ 307,38', 'blue'),
-color(f'Lucro real: Lucro Previsto x 0.05 = R$ {307.38 * 0.05}', 'green')
+color(f'Média do lucro real: Lucro Previsto x 0.05 = R$ {307.38 * 0.05}', 'green')
 ]
 
 }
@@ -195,25 +195,55 @@ Materiais = {
 f'Média de Gasto com materiais : Total gasto com materiais / Custo total de materiais = R$ {33962.13/18:.2f} '
 ],
 
-'Contrato: 25149 - Jardinatti0': [
+'Contrato: 25149 - Jardinatti': [
 f'Média de Gasto com materiais : Total gasto com materiais / Custo total de materiais = R$ {4516.80/14:.2f}'
 ],
 
-'Contrato 25147 - Garden': [
+'Contrato: 25147 - Garden': [
 f'Média de Gasto com materiais : Total gasto com materiais / Custo total de materiais = R$ {330.80/4:.2f}'
 ]
 }
 
 Desperdicio = {
-    'Teste'
+'Contrato: 25146 - Condomínio Estúdio Uno' : [
+f'Desperdício previsto: Custo total x 15%: {48033.13 * 0.15}'
+'O desperdício real não pode ser calculado'
+],
+
+'Contrato: 25149 - Jardinatti': [
+f'Desperdício previsto: Custo total x 15%: {6836.80 * 0.15}'
+'O desperdício real não pode ser calculado'
+],
+
+'Contrato: 25147 - Garden': [
+f'Desperdício previsto: Custo total x 12%: {780.80 * 0.12}'
+'O desperdício real não pode ser calculado'
+]
 }
 
 EquipamentosEletronicos = {
-    'Teste'
+'Equipamentos Eletronicos da empresa em geral':[
+'2 Notebooks',
+'1 Computador',
+'4 Impressoras multiuso',
+'2 Drones de imagem',
+'1 Câmera térmica',
+'1 Pacômetro',
+'2 Trenas à laser',
+'1 Modem',
+'3 HDs externos',
+'1 Televisão',
+'2 Monitores'
+]
 }   
 
 Funcionarios = {
-    'Teste'
+'Média de Funcionários por obra':[
+'Fixos: 2 Engenheiros Civis',
+'1 Encarregado de obra',
+'2 Pedreiros',
+'3 Ajudantes'
+]
 }
 
 #Retorna o a chave e o valor de cada uma das opções escolhidas
