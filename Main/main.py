@@ -161,7 +161,7 @@ MargemLucro = {
 'Venda total x 1.59(Taxa Mão de Obra/Taxa Material): R$ 76.270,99',
 color('Imposto pago: Total x 0,12: R$ 9.152,52', 'red'),
 color('Lucro Previsto: R$ 19.085,34', 'blue'),
-color(f'Lucro real: Lucro Previsto x 0.05 = R$ {19085.34 * 0.05}', 'green')
+color(f'Lucro real: Lucro Previsto x 0.05 = R$ {19085.34 * 0.05:.2f}', 'green')
 ],
 
 'Contrato: 25149 - Jardinatti' : [
@@ -173,7 +173,7 @@ color(f'Lucro real: Lucro Previsto x 0.05 = R$ {19085.34 * 0.05}', 'green')
 'Venda total x 1.59(Taxa Mão de Obra/Taxa Material): R$ 12.306,24',
 color('Imposto pago: Total x 0,12: R$ 1.476,75', 'red'),
 color('Lucro Previsto: R$ 3.992,69', 'blue'),
-color(f'Lucro real: Lucro Previsto x 0.05 = R$ {3992.69 * 0.05}', 'green')
+color(f'Lucro real: Lucro Previsto x 0.05 = R$ {3992.69 * 0.05:.2f}', 'green')
 ],
 
 'Contrato: 25147 - Garden' :[
@@ -185,7 +185,7 @@ color(f'Lucro real: Lucro Previsto x 0.05 = R$ {3992.69 * 0.05}', 'green')
 'Venda total x 1.59(Taxa Mão de Obra/Taxa Material): R$ 1.236,57',
 color('Imposto pago: Total x 0,12: R$ 148,39', 'red'),
 color('Lucro Previsto: R$ 307,38', 'blue'),
-color(f'Média do lucro real: Lucro Previsto x 0.05 = R$ {307.38 * 0.05}', 'green')
+color(f'Média do lucro real: Lucro Previsto x 0.05 = R$ {307.38 * 0.05:.2f}', 'green')
 ]
 
 }
@@ -206,17 +206,17 @@ f'Média de Gasto com materiais : Total gasto com materiais / Custo total de mat
 
 Desperdicio = {
 'Contrato: 25146 - Condomínio Estúdio Uno' : [
-f'Desperdício previsto: Custo total x 15%: {48033.13 * 0.15}'
+f'Desperdício previsto: Custo total x 15%: {48033.13 * 0.15:.2f}'
 'O desperdício real não pode ser calculado'
 ],
 
 'Contrato: 25149 - Jardinatti': [
-f'Desperdício previsto: Custo total x 15%: {6836.80 * 0.15}'
+f'Desperdício previsto: Custo total x 15%: {6836.80 * 0.15:.2f}'
 'O desperdício real não pode ser calculado'
 ],
 
 'Contrato: 25147 - Garden': [
-f'Desperdício previsto: Custo total x 12%: {780.80 * 0.12}'
+f'Desperdício previsto: Custo total x 12%: {780.80 * 0.12:.2f}'
 'O desperdício real não pode ser calculado'
 ]
 }
@@ -276,4 +276,3 @@ while True:
     sleep(1)
 title('Finalizando sistema de consultas...')
 sleep(2)
-
