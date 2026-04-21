@@ -247,7 +247,7 @@ Funcionarios = {
 }
 
 #Retorna o a chave e o valor de cada uma das opções escolhidas
-def items(case):
+def get_items(case):
     for key, values in case.items():
         sleep(2)
         title(f'{key}')
@@ -260,19 +260,20 @@ while True:
     sleep(1)
     match response:
         case 1:
-            items(Gastos)
+            get_items(Gastos)
         case 2:
-            items(MargemLucro)
+            get_items(MargemLucro)
         case 3:
-            items(Materiais)
+            get_items(Materiais)
         case 4:
-            items(Desperdicio)
+            get_items(Desperdicio)
         case 5:
-            items(EquipamentosEletronicos)
+            get_items(EquipamentosEletronicos)
         case 6:
-            items(Funcionarios)
+            get_items(Funcionarios)
         case 7:
             break
     sleep(1)
 title('Finalizando sistema de consultas...')
 sleep(2)
+
